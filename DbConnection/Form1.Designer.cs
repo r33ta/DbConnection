@@ -33,6 +33,7 @@
             this.VideoadaptersBox = new System.Windows.Forms.ComboBox();
             this.MemoryBox = new System.Windows.Forms.ComboBox();
             this.AddPcBtn = new System.Windows.Forms.Button();
+            this.NameBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // list
@@ -47,7 +48,7 @@
             // ProcessorsBox
             // 
             this.ProcessorsBox.FormattingEnabled = true;
-            this.ProcessorsBox.Location = new System.Drawing.Point(400, 12);
+            this.ProcessorsBox.Location = new System.Drawing.Point(400, 41);
             this.ProcessorsBox.Name = "ProcessorsBox";
             this.ProcessorsBox.Size = new System.Drawing.Size(349, 23);
             this.ProcessorsBox.TabIndex = 1;
@@ -55,7 +56,7 @@
             // VideoadaptersBox
             // 
             this.VideoadaptersBox.FormattingEnabled = true;
-            this.VideoadaptersBox.Location = new System.Drawing.Point(400, 41);
+            this.VideoadaptersBox.Location = new System.Drawing.Point(400, 70);
             this.VideoadaptersBox.Name = "VideoadaptersBox";
             this.VideoadaptersBox.Size = new System.Drawing.Size(349, 23);
             this.VideoadaptersBox.TabIndex = 1;
@@ -63,25 +64,34 @@
             // MemoryBox
             // 
             this.MemoryBox.FormattingEnabled = true;
-            this.MemoryBox.Location = new System.Drawing.Point(400, 70);
+            this.MemoryBox.Location = new System.Drawing.Point(400, 99);
             this.MemoryBox.Name = "MemoryBox";
             this.MemoryBox.Size = new System.Drawing.Size(349, 23);
             this.MemoryBox.TabIndex = 1;
             // 
             // AddPcBtn
             // 
-            this.AddPcBtn.Location = new System.Drawing.Point(674, 99);
+            this.AddPcBtn.Location = new System.Drawing.Point(674, 128);
             this.AddPcBtn.Name = "AddPcBtn";
             this.AddPcBtn.Size = new System.Drawing.Size(75, 23);
             this.AddPcBtn.TabIndex = 2;
             this.AddPcBtn.Text = "Добавить";
             this.AddPcBtn.UseVisualStyleBackColor = true;
+            this.AddPcBtn.Click += new System.EventHandler(this.AddPcBtn_Click);
+            // 
+            // NameBox
+            // 
+            this.NameBox.Location = new System.Drawing.Point(400, 12);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(349, 23);
+            this.NameBox.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 463);
+            this.Controls.Add(this.NameBox);
             this.Controls.Add(this.AddPcBtn);
             this.Controls.Add(this.MemoryBox);
             this.Controls.Add(this.VideoadaptersBox);
@@ -90,6 +100,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -100,5 +111,6 @@
         private ComboBox VideoadaptersBox;
         private ComboBox MemoryBox;
         private Button AddPcBtn;
+        private TextBox NameBox;
     }
 }

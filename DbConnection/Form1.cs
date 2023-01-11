@@ -15,6 +15,23 @@ public partial class Form1 : Form
         GetMemory();
     }
 
+    private void AddPcBtn_Click(object sender, EventArgs e)
+    {
+        using (var ac = new ApplicationContext())
+        {
+            var computer = new Computer()
+            {
+                Name = NameBox.Text,
+                ProcessorId = ((Processors)ProcessorsBox.SelectedItem).Id,
+                VideoadapterId = ((Videoadapters)VideoadaptersBox.SelectedItem).Id,
+                MemoryId = ((Memory)MemoryBox.SelectedItem).Id,
+            };
+
+            ac.Computers.Add(computer);
+            ac.SaveChanges();
+        }
+    }
+
     private void GetComputers()
     {
         using (var ac = new ApplicationContext())
