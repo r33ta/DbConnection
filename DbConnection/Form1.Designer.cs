@@ -34,6 +34,7 @@
             this.MemoryBox = new System.Windows.Forms.ComboBox();
             this.AddPcBtn = new System.Windows.Forms.Button();
             this.NameBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // list
@@ -42,31 +43,31 @@
             this.list.ItemHeight = 15;
             this.list.Location = new System.Drawing.Point(12, 12);
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(382, 439);
+            this.list.Size = new System.Drawing.Size(468, 439);
             this.list.TabIndex = 0;
             // 
             // ProcessorsBox
             // 
             this.ProcessorsBox.FormattingEnabled = true;
-            this.ProcessorsBox.Location = new System.Drawing.Point(400, 41);
+            this.ProcessorsBox.Location = new System.Drawing.Point(486, 41);
             this.ProcessorsBox.Name = "ProcessorsBox";
-            this.ProcessorsBox.Size = new System.Drawing.Size(349, 23);
+            this.ProcessorsBox.Size = new System.Drawing.Size(263, 23);
             this.ProcessorsBox.TabIndex = 1;
             // 
             // VideoadaptersBox
             // 
             this.VideoadaptersBox.FormattingEnabled = true;
-            this.VideoadaptersBox.Location = new System.Drawing.Point(400, 70);
+            this.VideoadaptersBox.Location = new System.Drawing.Point(486, 70);
             this.VideoadaptersBox.Name = "VideoadaptersBox";
-            this.VideoadaptersBox.Size = new System.Drawing.Size(349, 23);
+            this.VideoadaptersBox.Size = new System.Drawing.Size(263, 23);
             this.VideoadaptersBox.TabIndex = 1;
             // 
             // MemoryBox
             // 
             this.MemoryBox.FormattingEnabled = true;
-            this.MemoryBox.Location = new System.Drawing.Point(400, 99);
+            this.MemoryBox.Location = new System.Drawing.Point(486, 99);
             this.MemoryBox.Name = "MemoryBox";
-            this.MemoryBox.Size = new System.Drawing.Size(349, 23);
+            this.MemoryBox.Size = new System.Drawing.Size(263, 23);
             this.MemoryBox.TabIndex = 1;
             // 
             // AddPcBtn
@@ -75,22 +76,32 @@
             this.AddPcBtn.Name = "AddPcBtn";
             this.AddPcBtn.Size = new System.Drawing.Size(75, 23);
             this.AddPcBtn.TabIndex = 2;
-            this.AddPcBtn.Text = "Добавить";
+            this.AddPcBtn.Text = "Add";
             this.AddPcBtn.UseVisualStyleBackColor = true;
             this.AddPcBtn.Click += new System.EventHandler(this.AddPcBtn_Click);
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(400, 12);
+            this.NameBox.Location = new System.Drawing.Point(534, 12);
             this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(349, 23);
+            this.NameBox.Size = new System.Drawing.Size(215, 23);
             this.NameBox.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(486, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Name:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 463);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.AddPcBtn);
             this.Controls.Add(this.MemoryBox);
@@ -98,7 +109,7 @@
             this.Controls.Add(this.ProcessorsBox);
             this.Controls.Add(this.list);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "DbConnection";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +123,6 @@
         private ComboBox MemoryBox;
         private Button AddPcBtn;
         private TextBox NameBox;
+        private Label label1;
     }
 }
