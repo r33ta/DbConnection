@@ -2,6 +2,13 @@
 
 public class Videoadapters
 {
+    public Videoadapters(string? name, int memorySize, double frequency)
+    {
+        Name = name;
+        MemorySize = memorySize;
+        Frequency = frequency;
+    }
+
     public int Id { get; set; }
     public string? Name { get; set; }
     public int MemorySize { get; set; }

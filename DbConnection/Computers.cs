@@ -2,6 +2,14 @@
 
 public class Computers
 {
+    public Computers(string? name, int processorId, int videoadapterId, int memoryId)
+    {
+        Name = name;
+        ProcessorId = processorId;
+        VideoadapterId = videoadapterId;
+        MemoryId = memoryId;
+    }
+
     public int Id { get; set; }
     public string? Name { get; set; }
     public int ProcessorId { get; set; }

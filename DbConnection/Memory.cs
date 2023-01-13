@@ -2,6 +2,12 @@
 
 public class Memory
 {
+    public Memory(string? name, int memorySize)
+    {
+        Name = name;
+        MemorySize = memorySize;
+    }
+
     public int Id { get; set; }
     public string? Name { get; set; }
     public int MemorySize { get; set; }

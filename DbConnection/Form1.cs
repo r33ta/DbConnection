@@ -14,13 +14,12 @@ public partial class Form1 : Form
     {
         using (var ac = new ApplicationContext())
         {
-            var computer = new Computers()
-            {
-                Name = NameBox.Text,
-                ProcessorId = ((Processors)ProcessorsBox.SelectedItem).Id,
-                VideoadapterId = ((Videoadapters)VideoadaptersBox.SelectedItem).Id,
-                MemoryId = ((Memory)MemoryBox.SelectedItem).Id,
-            };
+            var computer = new Computers(
+                NameBox.Text,
+                ((Processors)ProcessorsBox.SelectedItem).Id,
+                ((Videoadapters)VideoadaptersBox.SelectedItem).Id,
+                ((Memory)MemoryBox.SelectedItem).Id
+            );
 
             ac.Computers.Add(computer);
             ac.SaveChanges();
@@ -89,20 +88,23 @@ public partial class Form1 : Form
     // Puts in fields all PC components by clicking on one of them
     private void list_SelectedIndexChanged(object sender, EventArgs e)
     {
-        Computers computer = list.SelectedItem as Computers ?? new Computers();
+        Computers? computer = list.SelectedItem as Computers;
 
-        NameBox.Text = computer.Name;
+        NameBox.Text = computer?.Name;
 
+        // Looking for processor by id
         for (int i = 0; i < ProcessorsBox.Items.Count; ++i)
-            if (((Processors)ProcessorsBox.Items[i]).Id == computer.ProcessorId)
+            if (((Processors)ProcessorsBox.Items[i]).Id == computer?.ProcessorId)
                 ProcessorsBox.SelectedIndex = i;
 
+        // Looking for videoadapter by id
         for (int i = 0; i < VideoadaptersBox.Items.Count; ++i)
-            if (((Videoadapters)VideoadaptersBox.Items[i]).Id == computer.VideoadapterId)
+            if (((Videoadapters)VideoadaptersBox.Items[i]).Id == computer?.VideoadapterId)
                 VideoadaptersBox.SelectedIndex = i;
 
+        // Looking for memory by id
         for (int i = 0; i < MemoryBox.Items.Count; ++i)
-            if (((Memory)MemoryBox.Items[i]).Id == computer.MemoryId)
+            if (((Memory)MemoryBox.Items[i]).Id == computer?.MemoryId)
                 MemoryBox.SelectedIndex = i;
     }
 }
