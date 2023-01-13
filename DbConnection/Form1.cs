@@ -25,6 +25,7 @@ public partial class Form1 : Form
             ac.Computers.Add(computer);
             ac.SaveChanges();
         }
+        GetComputers();
     }
 
 
@@ -82,5 +83,26 @@ public partial class Form1 : Form
             MemoryBox.Items.Clear();
             MemoryBox.Items.AddRange(memory);
         }
+    }
+
+
+    // Puts all PC components by clicking on one of them
+    private void list_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        Computers computer = list.SelectedItem as Computers ?? new Computers();
+
+        NameBox.Text = computer.Name;
+
+        for (int i = 0; i < ProcessorsBox.Items.Count; ++i)
+            if (((Processors)ProcessorsBox.Items[i]).Id == computer.ProcessorId)
+                ProcessorsBox.SelectedIndex = i;
+
+        for (int i = 0; i < VideoadaptersBox.Items.Count; ++i)
+            if (((Videoadapters)VideoadaptersBox.Items[i]).Id == computer.VideoadapterId)
+                VideoadaptersBox.SelectedIndex = i;
+
+        for (int i = 0; i < MemoryBox.Items.Count; ++i)
+            if (((Memory)MemoryBox.Items[i]).Id == computer.MemoryId)
+                MemoryBox.SelectedIndex = i;
     }
 }
