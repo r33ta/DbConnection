@@ -8,16 +8,16 @@ namespace DbConnection;
 public class Videoadapters
 {
     [Column("id")]
-    public int Id;
+    public int Id { get; set; }
 
     [Column("name")]
-    public string? Name;
-    
+    public string? Name { get; set; }
+
     [Column("memory_size")]
-    public int MemorySize;
+    public int MemorySize { get; set; }
 
     [Column("frequency")]
-    public double Frequency;
+    public double Frequency { get; set; }
 
     public override string ToString() => $"{Name}, {MemorySize}GB";
 }

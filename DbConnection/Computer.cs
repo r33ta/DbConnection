@@ -8,19 +8,19 @@ namespace DbConnection;
 public class Computer
 {
     [Column("id")]
-    public int Id;
+    public int Id { get; set; }
 
     [Column("name")]
-    public string? Name;
+    public string? Name { get; set; }
 
     [Column("processor_id")]
-    public int ProcessorId;
+    public int ProcessorId { get; set; }
 
     [Column("videoadapter_id")]
-    public int VideoadapterId;
+    public int VideoadapterId { get; set; }
 
     [Column("memory_id")]
-    public int MemoryId;
+    public int MemoryId { get; set; }
 
     public override string ToString() => $"{Name}";
 }

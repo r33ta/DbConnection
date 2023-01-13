@@ -8,16 +8,16 @@ namespace DbConnection;
 public class Processors
 {
     [Column("id")]
-    public int Id;
+    public int Id { get; set; }
 
     [Column("name")]
-    public string? Name;
+    public string? Name { get; set; }
 
     [Column("frequency")]
-    public double Frequency;
+    public double Frequency { get; set; }
 
     [Column("cores")]
-    public int Cores;
+    public int Cores { get; set; }
 
     public override string ToString() => $"{Name} {Cores}*{Frequency}GHz";
 }

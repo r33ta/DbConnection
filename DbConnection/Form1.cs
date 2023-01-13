@@ -8,6 +8,7 @@ public partial class Form1 : Form
         GetAllComponents();
     }
 
+
     // Adds new computer to database
     private void AddPcBtn_Click(object sender, EventArgs e)
     {
@@ -34,6 +35,8 @@ public partial class Form1 : Form
         GetVideoadapters();
         GetMemory();
     }
+
+
     // Gets computers from the database
     private void GetComputers()
     {
@@ -44,6 +47,8 @@ public partial class Form1 : Form
             list.Items.AddRange(computers);
         }
     }
+
+
     // Gets processors from the database
     private void GetProcessors()
     {
@@ -54,6 +59,8 @@ public partial class Form1 : Form
             ProcessorsBox.Items.AddRange(processors);
         }
     }
+
+
     // Gets videoadapters from the database
     private void GetVideoadapters()
     {
@@ -64,6 +71,8 @@ public partial class Form1 : Form
             VideoadaptersBox.Items.AddRange(videoadapters);
         }
     }
+
+
     // Gets memory from the database
     private void GetMemory()
     {
