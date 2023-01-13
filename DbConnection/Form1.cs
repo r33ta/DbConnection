@@ -86,7 +86,7 @@ public partial class Form1 : Form
     }
 
 
-    // Puts all PC components by clicking on one of them
+    // Puts in fields all PC components by clicking on one of them
     private void list_SelectedIndexChanged(object sender, EventArgs e)
     {
         Computers computer = list.SelectedItem as Computers ?? new Computers();
