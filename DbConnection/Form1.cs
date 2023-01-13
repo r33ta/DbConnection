@@ -14,7 +14,7 @@ public partial class Form1 : Form
     {
         using (var ac = new ApplicationContext())
         {
-            var computer = new Computer()
+            var computer = new Computers()
             {
                 Name = NameBox.Text,
                 ProcessorId = ((Processors)ProcessorsBox.SelectedItem).Id,
